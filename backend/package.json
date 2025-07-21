@@ -1,0 +1,30 @@
+{
+  "name": "bardabar-backend",
+  "version": "1.0.0",
+  "description": "Backend server for Бар-да-бар cafe",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cafe",
+    "restaurant",
+    "api",
+    "express"
+  ],
+  "author": "Бар-да-бар Team",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "helmet": "^7.1.0",
+    "pg": "^8.11.3",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}

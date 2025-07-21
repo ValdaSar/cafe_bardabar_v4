@@ -1,0 +1,30 @@
+{
+  "name": "bardabar-admin",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Admin panel for Бар-да-бар cafe",
+  "main": "index.js",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@strapi/strapi": "^4.15.5",
+    "@strapi/plugin-users-permissions": "^4.15.5",
+    "@strapi/plugin-i18n": "^4.15.5",
+    "pg": "^8.11.3"
+  },
+  "author": {
+    "name": "Бар-да-бар Team"
+  },
+  "strapi": {
+    "uuid": "bardabar-admin-uuid"
+  },
+  "engines": {
+    "node": ">=16.0.0 <=20.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}
