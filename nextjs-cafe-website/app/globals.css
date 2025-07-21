@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #7A2E2E;
+  --accent: #F5A623;
+  --background: #FDF8F4;
+  --text: #333333;
+}
+
+@layer base {
+  html {
+    @apply bg-background text-text;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+  h3 {
+    @apply text-2xl md:text-3xl lg:text-4xl;
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-4 mx-auto max-w-7xl;
+  }
+  .btn {
+    @apply px-6 py-3 font-medium rounded-md transition-all duration-300 ease-in-out inline-block text-center;
+  }
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-opacity-90;
+  }
+  .btn-secondary {
+    @apply bg-accent text-white hover:bg-opacity-90;
+  }
+  .btn-outline {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-white;
+  }
+  .btn-accent {
+    @apply bg-accent text-white hover:bg-opacity-90;
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+}
