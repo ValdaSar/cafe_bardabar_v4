@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кафе "Бар-да-бар" - Проект</title>
+    <style>
+        :root {
+            --primary: #7A2E2E;
+            --accent: #F5A623;
+            --background: #FDF8F4;
+            --text: #333333;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #6a2828;
+            padding: 0.5rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            margin: 0 0.5rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover {
+            background-color: var(--accent);
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        section {
+            margin-bottom: 3rem;
+        }
+        
+        h1, h2, h3 {
+            color: var(--primary);
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 3rem 1rem;
+            background-color: var(--primary);
+            color: white;
+            margin-bottom: 2rem;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .card h3 {
+            margin-top: 0;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.5rem;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #6a2828;
+        }
+        
+        .btn-accent {
+            background-color: var(--accent);
+        }
+        
+        .btn-accent:hover {
+            background-color: #e09620;
+        }
+        
+        footer {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .social-links {
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            color: white;
+            margin: 0 0.5rem;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            
+            nav {
+                flex-direction: column;
+            }
+            
+            nav a {
+                margin: 0.25rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Кафе "Бар-да-бар"</h1>
+        <p>Проект веб-сайта</p>
+    </header>
+    
+    <nav>
+        <a href="#project">О проекте</a>
+        <a href="#frontend">Frontend</a>
+        <a href="#backend">Backend</a>
+        <a href="#admin">Admin Panel</a>
+        <a href="#database">База данных</a>
+    </nav>
+    
+    <div class="hero">
+        <h1>Полнофункциональный веб-сайт для кафе "Бар-да-бар"</h1>
+        <p>Современный веб-сайт с возможностью просмотра меню, афиши мероприятий, бронирования столиков и многого другого.</p>
+    </div>
+    
+    <main>
+        <section id="project">
+            <h2>О проекте</h2>
+            <div class="card">
+                <p>Проект представляет собой полнофункциональный веб-сайт для кафе "Бар-да-бар", состоящий из трех основных частей:</p>
+                <ul>
+                    <li><strong>Frontend (Next.js)</strong> - Современный лендинг с SSR</li>
+                    <li><strong>Backend (Express.js)</strong> - API сервер</li>
+                    <li><strong>Admin Panel (Strapi)</strong> - Панель управления контентом</li>
+                </ul>
+                <p>Сайт использует следующую цветовую схему:</p>
+                <ul>
+                    <li>Основной: #7A2E2E (бордовый)</li>
+                    <li>Акцент: #F5A623 (золотой)</li>
+                    <li>Фон: #FDF8F4 (кремовый)</li>
+                    <li>Текст: #333333 (темно-серый)</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="frontend">
+            <h2>Frontend (Next.js)</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Главная страница</h3>
+                    <p>Современный лендинг с секциями:</p>
+                    <ul>
+                        <li>Hero секция с фоновым изображением</li>
+                        <li>Секция "О нас"</li>
+                        <li>Превью меню</li>
+                        <li>Превью мероприятий</li>
+                        <li>Отзывы клиентов</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Страница меню</h3>
+                    <p>Интерактивное меню с возможностями:</p>
+                    <ul>
+                        <li>Фильтрация по категориям</li>
+                        <li>Карточки блюд с фото и описанием</li>
+                        <li>Поиск и сортировка</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Страница мероприятий</h3>
+                    <p>Афиша мероприятий с функциями:</p>
+                    <ul>
+                        <li>Календарь событий</li>
+                        <li>Фильтрация по типу мероприятия</li>
+                        <li>Детальные страницы событий</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Страница бронирования</h3>
+                    <p>Форма бронирования столиков:</p>
+                    <ul>
+                        <li>Выбор даты и времени</li>
+                        <li>Указание количества гостей</li>
+                        <li>Валидация данных</li>
+                        <li>Подтверждение бронирования</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Страница контактов</h3>
+                    <p>Контактная информация:</p>
+                    <ul>
+                        <li>Интерактивная карта</li>
+                        <li>Контактная форма</li>
+                        <li>Режим работы</li>
+                        <li>Социальные сети</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>QR-генератор</h3>
+                    <p>Генератор QR-кодов для меню:</p>
+                    <ul>
+                        <li>Настройка внешнего вида</li>
+                        <li>Скачивание в разных форматах</li>
+                        <li>Инструкции по использованию</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="backend">
+            <h2>Backend (Express.js)</h2>
+            <div class="card">
+                <h3>API Endpoints</h3>
+                <ul>
+                    <li><strong>GET /api/menu</strong> - получение меню</li>
+                    <li><strong>GET /api/events</strong> - получение мероприятий</li>
+                    <li><strong>GET /api/reviews</strong> - получение отзывов</li>
+                    <li><strong>POST /api/reviews</strong> - добавление отзыва</li>
+                    <li><strong>POST /api/reservation</strong> - бронирование столика</li>
+                    <li><strong>GET /api/reservation/available-times</strong> - доступное время</li>
+                    <li><strong>POST /api/contact</strong> - обработка контактной формы</li>
+                </ul>
+                
+                <h3>Особенности</h3>
+                <ul>
+                    <li>REST API для всех функций</li>
+                    <li>Интеграция с базой данных PostgreSQL</li>
+                    <li>Обработка бронирований и отзывов</li>
+                    <li>Уведомления через Telegram</li>
+                    <li>Валидация данных</li>
+                    <li>Защита от SQL-инъекций</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="admin">
+            <h2>Admin Panel (Strapi)</h2>
+            <div class="card">
+                <h3>Функциональность</h3>
+                <ul>
+                    <li><strong>Управление меню</strong> - добавление, редактирование и удаление блюд и категорий</li>
+                    <li><strong>Управление мероприятиями</strong> - создание и редактирование событий</li>
+                    <li><strong>Модерация отзывов</strong> - одобрение или отклонение отзывов</li>
+                    <li><strong>Управление бронированиями</strong> - просмотр и обработка заявок</li>
+                    <li><strong>Настройка команды</strong> - информация о сотрудниках</li>
+                </ul>
+                
+                <h3>Роли пользователей</h3>
+                <ul>
+                    <li><strong>Admin</strong> - полный доступ ко всем функциям</li>
+                    <li><strong>Content Manager</strong> - управление контентом</li>
+                    <li><strong>Editor</strong> - ограниченные права редактирования</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="database">
+            <h2>База данных (PostgreSQL)</h2>
+            <div class="card">
+                <h3>Структура базы данных</h3>
+                <ul>
+                    <li><strong>menu_categories</strong> - категории меню</li>
+                    <li><strong>menu_items</strong> - блюда меню</li>
+                    <li><strong>events</strong> - мероприятия</li>
+                    <li><strong>reviews</strong> - отзывы</li>
+                    <li><strong>reservations</strong> - бронирования</li>
+                    <li><strong>team_members</strong> - команда</li>
+                </ul>
+                
+                <h3>Оптимизация</h3>
+                <ul>
+                    <li>Индексы для быстрого поиска</li>
+                    <li>Оптимизация запросов</li>
+                    <li>Кэширование данных</li>
+                    <li>Резервное копирование</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Запуск проекта</h2>
+            <div class="card">
+                <h3>Frontend (Next.js)</h3>
+                <pre><code>cd next-landing
+npm install
+npm run dev</code></pre>
+                
+                <h3>Backend (Express.js)</h3>
+                <pre><code>cd backend
+npm install
+npm run dev</code></pre>
+                
+                <h3>Admin Panel (Strapi)</h3>
+                <pre><code>cd admin
+npm install
+npm run develop</code></pre>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Кафе "Бар-да-бар". Все права защищены.</p>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">VK</a>
+        </div>
+    </footer>
+</body>
+</html>
